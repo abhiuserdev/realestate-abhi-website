@@ -26,6 +26,15 @@
     --container-padding: 16px;
   }
 
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
   /* Navigation */
   .nav-menu,
   .nav-actions .btn {
@@ -135,18 +144,64 @@
   }
 
   /* Hero */
+  .hero {
+    min-height: auto;
+    padding: 100px 0 60px;
+  }
+
+  .hero-content {
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+    line-height: 1.15;
+    word-break: break-word;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-search {
+    padding: 16px;
+    width: 100%;
+  }
+
   .hero-search-form {
+    display: flex !important;
     flex-direction: column !important;
+    gap: 12px !important;
   }
 
   .hero-search-form .form-group {
+    width: 100%;
     margin-bottom: 0;
+  }
+
+  .hero-search-form .form-input,
+  .hero-search-form .form-select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .hero-search-form .btn {
+    width: 100%;
+    margin-top: 4px;
   }
 
   /* Stats */
   .stats-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 24px !important;
+    width: 100%;
+  }
+
+  .stats-bar {
+    padding: 40px 0;
   }
 
   /* Services */
@@ -168,8 +223,70 @@
     grid-template-columns: 1fr !important;
   }
 
+  .contact-info-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Agents */
+  .agents-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* About */
+  .about-story {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .about-values-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
   /* Blog */
   .blog-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Properties page layout */
+  .properties-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .filters-sidebar {
+    display: none;
+  }
+
+  .properties-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .properties-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Neighborhoods */
+  .neighborhoods-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .neighborhood-card {
+    aspect-ratio: 16/10;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Why choose */
+  .why-choose-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Blog preview */
+  .blog-preview-grid {
     grid-template-columns: 1fr !important;
   }
 }
@@ -216,5 +333,14 @@
 
   .stats-grid {
     grid-template-columns: 1fr !important;
+  }
+
+  /* CTA Banner */
+  .cta-banner {
+    padding: 60px 16px !important;
+  }
+
+  .cta-banner h2 {
+    font-size: clamp(1.5rem, 7vw, 2rem) !important;
   }
 }
